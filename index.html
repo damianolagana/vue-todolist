@@ -13,7 +13,7 @@
         <div id="container">
             <h1>Lista Task</h1>
             <ul>
-                <li v-for="(task,i) in taskList" :class="toDoClass(i)">{{taskList[i].text}}</li>
+                <li v-for="(task,i) in taskList" :class="toDoClass(i)">{{taskList[i].text}} <button @click="removeToDo()">X</button></li>
             </ul>
         </div>
         

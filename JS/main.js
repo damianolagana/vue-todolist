@@ -14,7 +14,7 @@ createApp({
     methods : {
         toDoClass(i){
             let doneClass="";
-            if(this.taskList[i].done = "true"){
+            if(this.taskList[i].done == true){
                 doneClass = "done";
             }
 
