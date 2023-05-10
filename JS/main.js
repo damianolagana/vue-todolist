@@ -13,13 +13,13 @@ createApp({
     },
     methods : {
         toDoClass(i){
-            let doneClass="done";
-            if(taskList[i].done == "true"){
+            let doneClass="";
+            if(this.taskList[i].done = "true"){
                 doneClass = "done";
             }
 
             return doneClass;
 
         }
-    }
+    },
   }).mount('#app')
