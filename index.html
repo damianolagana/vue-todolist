@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue-todolist</title>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li v-for="(task,i) in taskList">{{taskList[i].text}}</li>
-        </ul>
+        <div id="container">
+            <h1>Lista Task</h1>
+            <ul>
+                <li v-for="(task,i) in taskList" :class="toDoClass(i)">{{taskList[i].text}}</li>
+            </ul>
+        </div>
+        
     </div>
     <script src="./JS/main.js"></script>
 </body>
