@@ -1,0 +1,14 @@
+const {createApp} = Vue;
+
+createApp({
+    data() {
+      return {
+        taskList : [
+            {text:"Portare fuori il cane", done: true},
+            {text:"Fare la lavatrice", done: false},
+            {text:"Preparare la cena", done: false},
+            {text:"Portare fuori la spazzatura", done: false},
+        ]
+      }
+    }
+  }).mount('#app')
