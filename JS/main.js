@@ -3,6 +3,10 @@ const {createApp} = Vue;
 createApp({
     data() {
       return {
+        newTask : {
+            text: "",
+            done: false,
+        },
         taskList : [
             {text:"Portare fuori il cane", done: true},
             {text:"Fare la lavatrice", done: false},
@@ -24,6 +28,11 @@ createApp({
         removeToDo(i){
             this.taskList.splice(i,1);
 
+        },
+        addTask(){
+            // let newTask = {...this.newTask};
+            this.taskList.unshift(this.newTask);
+            this.newTask.text= "";
         }
     },
   }).mount('#app')

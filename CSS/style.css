@@ -16,6 +16,10 @@ h1{
     align-items: center;
 }
 
+ul{
+    padding-top: 10px;
+}
+
 .done{
     text-decoration: line-through;
 }
