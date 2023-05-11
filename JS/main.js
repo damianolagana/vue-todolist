@@ -20,6 +20,10 @@ createApp({
 
             return doneClass;
 
+        },
+        removeToDo(i){
+            this.taskList.splice(i,1);
+
         }
     },
   }).mount('#app')
