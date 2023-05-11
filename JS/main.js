@@ -35,6 +35,9 @@ createApp({
             let newTask={...this.newTask};
             this.taskList.unshift(newTask);
             this.newTask.text="";
+        },
+        changeTask(i){
+            this.taskList[i].done = !this.taskList[i].done
         }
     },
   }).mount('#app')
