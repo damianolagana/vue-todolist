@@ -4,7 +4,7 @@ createApp({
     data() {
       return {
         newTask : {
-            text: "",
+            text:"",
             done: false,
         },
         taskList : [
@@ -30,9 +30,11 @@ createApp({
 
         },
         addTask(){
-            // let newTask = {...this.newTask};
-            this.taskList.unshift(this.newTask);
-            this.newTask.text= "";
+            console.log(this.newTask);
+
+            let newTask={...this.newTask};
+            this.taskList.unshift(newTask);
+            this.newTask.text="";
         }
     },
   }).mount('#app')

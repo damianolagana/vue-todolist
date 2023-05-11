@@ -12,10 +12,10 @@
     <div id="app">
         <div id="container">
             <h1>Lista Task</h1>
-            <input v-model="newTask.text" type="text" placeholder="Inserisci task">
+            <input @keyup.enter="addTask()" v-model="newTask.text" type="text" placeholder="Inserisci task">
             <button @click="addTask()">Aggiungi</button>
             <ul>
-                <li v-for="(task,i) in taskList" :class="toDoClass(i)">{{taskList[i].text}} <button @click="removeToDo()">X</button></li>
+                <li v-for="(task,i) in taskList" :class="toDoClass(i)">{{task}} <button @click="removeToDo()">X</button></li>
             </ul>
         </div>
         
